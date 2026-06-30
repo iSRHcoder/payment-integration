@@ -7,8 +7,8 @@ import paymentRouter from "./routes/paymentRoutes.js";
 
 const app = express();
 
-console.log(`RAZORPAY_KEY_ID : ${process.env.RAZORPAY_KEY_ID}`);
-console.log(`RAZORPAY_KEY_SECRET : ${process.env.RAZORPAY_KEY_SECRET}`);
+//console.log(`RAZORPAY_KEY_ID : ${process.env.RAZORPAY_KEY_ID}`);
+//console.log(`RAZORPAY_KEY_SECRET : ${process.env.RAZORPAY_KEY_SECRET}`);
 
 app.use(cors({
   origin: "http://localhost:3000",

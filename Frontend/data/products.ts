@@ -5,7 +5,7 @@ export const products = [
     description: "Premium sound quality with noise cancellation.",
     image:
       "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop",
-    price: 1,
+    price: 1000,
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const products = [
     description: "Track your fitness and notifications easily.",
     image:
       "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop",
-    price: 3,
+    price: 3000,
   },
   {
     id: 3,
@@ -21,6 +21,6 @@ export const products = [
     description: "RGB mechanical keyboard for gaming and coding.",
     image:
       "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?q=80&w=1200&auto=format&fit=crop",
-    price: 5,
+    price: 5000,
   },
 ];

@@ -6,7 +6,7 @@ import Footer from "../components/layout/Footer";
 import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
-  title: "RazorShop",
+  title: "MyShop",
   description: "Learning Razorpay Integration",
 };
 

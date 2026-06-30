@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ShoppingCart } from "lucide-react";
 import Button from "./ui/Button";
 import { Product } from "@/types/products";
-import { loadRazorpay } from "@/utils/loadRazorpay";
+import { loadRazorpay, RazorpayPaymentError } from "@/utils/loadRazorpay";
 import { toast } from "sonner";
 import axios from "axios";
 
@@ -48,7 +48,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
       amount: orderData.amount,
       currency: orderData.currency,
       order_id: orderData.id,
-      name: "RazorShop",
+      name: "MyShop",
       description: product.description,
       image: product.image,
 
@@ -88,6 +88,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
     };
 
     const rzp = new window.Razorpay(options);
+
+    rzp.on("payment.failed", (response: { error: RazorpayPaymentError }) => {
+      console.log("Payment Failed");
+      console.log(response.error);
+    });
+
     rzp.open();
   };
 

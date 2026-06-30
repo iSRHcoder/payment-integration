@@ -10,7 +10,7 @@ const Header = () => {
             href="/"
             className="text-2xl font-extrabold tracking-tight text-indigo-600"
           >
-            RazorShop
+            MyShop
           </Link>
 
           <nav className="flex items-center gap-6 text-sm font-medium text-slate-700">
@@ -18,9 +18,9 @@ const Header = () => {
               Home
             </Link>
 
-            <Link href="/checkout" className="hover:text-indigo-600">
+            {/* <Link href="/checkout" className="hover:text-indigo-600">
               Checkout
-            </Link>
+            </Link> */}
           </nav>
         </div>
       </Container>

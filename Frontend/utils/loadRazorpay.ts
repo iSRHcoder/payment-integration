@@ -22,8 +22,25 @@ export interface RazorpayOptions {
   };
 }
 
+export interface RazorpayPaymentError {
+  code: string;
+  description: string;
+  source: string;
+  step: string;
+  reason: string;
+  metadata: {
+    order_id: string;
+    payment_id: string;
+  };
+}
+
 interface RazorpayInstance {
   open: () => void;
+
+  on: (
+    event: "payment.failed",
+    callback: (response: { error: RazorpayPaymentError }) => void,
+  ) => void;
 }
 
 declare global {
