@@ -12,7 +12,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: [
+      "http://localhost:3000",
+      "https://payment-integration-1-i7mh.onrender.com",
+    ],
     methods: ["GET", "POST"],
     credentials: true,
   }),
