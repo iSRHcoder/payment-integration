@@ -10,15 +10,17 @@ const app = express();
 //console.log(`RAZORPAY_KEY_ID : ${process.env.RAZORPAY_KEY_ID}`);
 //console.log(`RAZORPAY_KEY_SECRET : ${process.env.RAZORPAY_KEY_SECRET}`);
 
-app.use(cors({
-  origin: "http://localhost:3000",
-  methods: ["GET", "POST"],
-  credentials: true,
-}));
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"],
+    credentials: true,
+  }),
+);
 
 app.use(express.json());
 
-app.use("/api/v1", paymentRouter);
+app.use("/api/v1/payment", paymentRouter);
 
 app.get("/health", (req, res) => {
   res.status(200).json({
